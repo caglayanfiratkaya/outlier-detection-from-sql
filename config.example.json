@@ -1,0 +1,38 @@
+{
+  "sql_query": "SELECT ID, NAME, CATEGORY, GROUP_NAME, METRIC_A, UNIT_A, METRIC_B, UNIT_B, BASE_VALUE FROM SAMPLE_DATA_TABLE WHERE CONDITION = 'EXAMPLE'",
+  "analysis_settings": {
+    "base_quantity_column": "BASE_VALUE",
+    "group_by_columns": [
+      "CATEGORY",
+      "GROUP_NAME"
+    ],
+    "z_score_threshold": 2.5,
+    "normalize_map": {
+      "METRIC_A": "UNIT_A",
+      "METRIC_B": "UNIT_B"
+    }
+  },
+  "report_settings": {
+    "column_order": [
+      "ID",
+      "NAME",
+      "CATEGORY",
+      "GROUP_NAME",
+      "NORMALIZED_METRIC_A",
+      "AVERAGE_NORMALIZED_METRIC_A",
+      "NORMALIZED_METRIC_B",
+      "AVERAGE_NORMALIZED_METRIC_B"
+    ],
+    "column_labels": {
+    "ID": "ID",
+    "NAME": "Name",
+    "CATEGORY": "Category",
+    "GROUP_NAME": "Group",
+    "NORMALIZED_METRIC_A": "Normalized Metric A",
+    "AVERAGE_NORMALIZED_METRIC_A": "Average Normalized Metric A",
+    "NORMALIZED_METRIC_B": "Normalized Metric B",
+    "AVERAGE_NORMALIZED_METRIC_B": "Average Normalized Metric B",
+    "OUTLIER_COLUMNS": "Outlier Columns"
+    }
+  }
+}
