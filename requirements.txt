@@ -5,3 +5,4 @@ scipy
 openpyxl
 pyodbc
 python-dotenv
+XlsxWriter
